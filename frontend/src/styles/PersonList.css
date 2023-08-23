@@ -1,0 +1,37 @@
+.personen-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.person {
+    width: calc(33% - 20px);
+    margin-bottom: 40px;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.rounded-image {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make the element round */
+    overflow: hidden; /* Hide the overflow to maintain the rounded shape */
+    display: inline-block; /* Display the element inline */
+}
+
+.rounded-image img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Maintain the image aspect ratio and cover the container */
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.lebensabschnitt {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+}
