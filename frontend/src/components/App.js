@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/style.css';
-import ThemenList from './ThemenList';
 import PersonList from './PersonList';
-import ContactForm from './ContactForm';
+//import ContactForm from './ContactForm';
 import Header from './Header';
 import Footer from './Footer';
+import ButtonNavigation from './ButtonNavigation';
 
 function App() {
   const [Themen, setThemen] = useState([]);
@@ -26,17 +26,14 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, []); 
 
   return (
     <div className="container">
       <Header />
-      <ThemenList Themen={Themen} />
+      <ButtonNavigation Themen={Themen}/>
       <div className='single_container'>
         <PersonList Personen={Personen} />
-      </div>
-      <div className='single_container'>
-        <ContactForm />
       </div>
       <Footer />
     </div>
@@ -44,3 +41,9 @@ function App() {
 }
 
 export default App;
+
+/*
+  <div className='single_container'>
+    <ContactForm />
+  </div>
+*/
