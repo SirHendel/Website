@@ -1,10 +1,6 @@
 footer {
-    background-color: #0a0a0a;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-footer p {
-    font-size: 0.9rem;
+    background-image: url('http://localhost:4000/images/foot.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;  
 }

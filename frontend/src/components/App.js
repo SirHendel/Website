@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/style.css';
 import PersonList from './PersonList';
-//import ContactForm from './ContactForm';
+import ContactForm from './ContactForm';
 import Header from './Header';
 import Footer from './Footer';
 import ButtonNavigation from './ButtonNavigation';
@@ -31,9 +31,19 @@ function App() {
   return (
     <div className="container">
       <Header />
+    
       <ButtonNavigation Themen={Themen}/>
       <div className='single_container'>
         <PersonList Personen={Personen} />
+      </div>
+      <div className='single_container'>
+        <ContactForm />
+      </div>
+      <div className='single_container'>
+        <ContactForm />
+      </div>
+      <div className='single_container'>
+        <ContactForm />
       </div>
       <Footer />
     </div>
@@ -41,9 +51,3 @@ function App() {
 }
 
 export default App;
-
-/*
-  <div className='single_container'>
-    <ContactForm />
-  </div>
-*/

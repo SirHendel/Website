@@ -1,24 +1,16 @@
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Global styles */
-body {
-    background-color: #f0f0f0;
-    color: #acacac;
-    font-family: Arial, sans-serif;
-}
-
 .container {
     text-align: center;
-    color: #fff;
-    background-color: #333;
-    padding: 2rem;
+    background-image: url('http://localhost:4000/images/body.png');
+    background-size: cover; /* Adjust the size to cover the entire element */
+    background-position: center center; /* Center the image horizontally and vertically */
+    background-repeat: no-repeat; 
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 16px;
+    font-weight: normal; 
+    font-style: normal; 
 }
 .container_einzeln {
     text-align: center;
-    background-color: #884c4c;
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 100px;
@@ -26,18 +18,7 @@ body {
     border-radius: 31px;
 }
 
-.titel {
-    text-align: center;
-    color: #fff;
-    padding: 2rem;
-    background-color: #333;
-    font-size: large;
-}
-
-.text {
-    text-align: center;
-    color: #fff;
-    background-color: #333;
-    padding: 2rem;
-    font-size: medium;
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('http://localhost:4000/fonts/to/01_PressStart2P-Regular.ttf') format('truetype');
 }

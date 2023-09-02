@@ -1,8 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import '../styles/ButtonNavigation.css';
 
-const ButtonNavigation = ({ Themen }) => { 
+const ButtonNavigation = ({ Themen }) => {
   const buttonsRef = useRef([]);
+  const [openIndex, setOpenIndex] = useState(-1); // Track the index of the open button
 
   useEffect(() => {
     buttonsRef.current = buttonsRef.current.slice(0, 3);
@@ -48,42 +49,27 @@ const ButtonNavigation = ({ Themen }) => {
       });
     };
   }, []);
-  const [openIndex, setOpenIndex] = useState(-1);
-  const [showBackButton, setShowBackButton] = useState(false);
 
-  function handleMoreClick(index) {
-    setOpenIndex(index);
-    setShowBackButton(true);
-  }
-
-  function handleBackClick() {
-    setOpenIndex(-1);
-    setShowBackButton(false);
-  }
+  // Function to toggle the text open/close state
+  const toggleText = (index) => {
+    setOpenIndex(openIndex === index ? -1 : index);
+  };
 
   return (
     <div className="button-container">
-      {showBackButton && (
-        <button className="back-button" onClick={handleBackClick}>
-          Back
-        </button>
-      )}
-      {!showBackButton &&
-        Themen.map((item, index) => (
-          <div key={index}>
-            <button
-              ref={(button) => (buttonsRef.current[index] = button)}
-              onClick={() => handleMoreClick(index)}
-            >
-              {item.title}
-            </button>
+      {Themen.map((item, index) => (
+        <div key={index}>
+          <button
+            ref={(button) => (buttonsRef.current[index] = button)}
+            onClick={() => toggleText(index)} // Toggle text on button click
+          >
+            {item.title}
+          </button>
+          <div>
+            {openIndex === index && <p>{item.text}</p>}
           </div>
-        ))}
-      {openIndex !== -1 && (
-        <div>
-          <p>{Themen[openIndex].text}</p>
         </div>
-      )}
+      ))}
     </div>
   );
 };

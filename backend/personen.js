@@ -7,19 +7,19 @@ router.get('/', (req, res) => {
     {
       id: 1,
       name: 'Niki Hendel',
-      bildUrl: 'http://localhost:4000/images/NikiHendel.jpg',
+      bildUrl: 'http://localhost:4000/images/NikiHendel.png',
       lebensabschnitt: 'Ne coole socke.',
     },
     {
       id: 2,
       name: 'Alex Stiwi',
-      bildUrl: 'http://localhost:4000/images/AlexanderStiwi.jpg',
+      bildUrl: 'http://localhost:4000/images/AlexanderStiwi.png',
       lebensabschnitt: 'Montana black fan',
     },
     {
       id: 3,
       name: 'Patrick scheps',
-      bildUrl: 'http://localhost:4000/images/PatrickSChepser.jpg',
+      bildUrl: 'http://localhost:4000/images/PatrickSChepser.png',
       lebensabschnitt: 'Ist Klein',
     },
   ]); 
